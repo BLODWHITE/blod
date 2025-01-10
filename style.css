@@ -1,0 +1,91 @@
+/* Genel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Arka Plan ve Animasyon */
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #000; /* Arka Plan Rengi */
+}
+
+.animation-container {
+    width: 100%;
+    height: 100vh;
+    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.animated-title {
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    animation: slideIn 2s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Video Bölümü */
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.video-title {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* WATCH VIDEO Yazısı */
+.watch-video {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.watch-video:hover {
+    color: #ff0;
+}
